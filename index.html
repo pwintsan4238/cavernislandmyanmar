@@ -1,0 +1,539 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Cavern Island Resort · Hlaing Gu Island, Mergui Archipelago</title>
+<meta name="description" content="Cavern Island Resort on Hlaing Gu Island in Myanmar's Mergui Archipelago: 25 rooms between jungle and sea, sea caves, snorkeling, kayaking and boat transfers from Kawthaung.">
+<meta property="og:title" content="The Cavern Island Resort">
+<meta property="og:description" content="Discover Paradise Beyond the Ordinary. A hidden tropical island in the Mergui Archipelago, Southern Myanmar.">
+<meta property="og:image" content="images/hero.jpg">
+<link rel="icon" type="image/png" href="images/mark-teal.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&family=Noto+Sans+Myanmar:wght@300;400;500&family=Noto+Sans+Thai:wght@300;400;500&family=Noto+Serif+Thai:wght@400;500&family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header" id="top">
+  <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="menu">
+    <span class="burger"><i></i><i></i></span>
+    <span data-i18n="nav.menu">Menu</span>
+  </button>
+
+  <a href="#top" class="brand" aria-label="The Cavern Island Resort">
+    <img src="images/logo-white.png" alt="The Cavern Island Resort" class="logo logo-light">
+    <img src="images/logo-teal.png" alt="" class="logo logo-dark" aria-hidden="true">
+  </a>
+
+  <div class="header-right">
+    <div class="lang" id="lang">
+      <button class="lang-btn" id="langBtn" aria-haspopup="listbox" aria-expanded="false">
+        <span id="langCurrent">EN</span>
+        <svg width="10" height="6" viewBox="0 0 10 6" aria-hidden="true"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.3"/></svg>
+      </button>
+      <ul class="lang-list" role="listbox" id="langList">
+        <li><button data-lang="en">English</button></li>
+        <li><button data-lang="my">မြန်မာ</button></li>
+        <li><button data-lang="th">ไทย</button></li>
+        <li><button data-lang="zh">中文</button></li>
+      </ul>
+    </div>
+    <a href="#book" class="btn btn-book" data-i18n="nav.book">Book Now</a>
+  </div>
+</header>
+
+<!-- ============ MENU OVERLAY ============ -->
+<nav class="menu" id="menu" aria-hidden="true">
+  <div class="menu-inner">
+    <ul class="menu-links">
+      <li><a href="#about" data-i18n="nav.about">About</a></li>
+      <li><a href="#caverns" data-i18n="nav.caverns">The Caverns</a></li>
+      <li><a href="#stay" data-i18n="nav.stay">Stay</a></li>
+      <li><a href="#experiences" data-i18n="nav.experiences">Experiences</a></li>
+      <li><a href="#dining" data-i18n="nav.dining">Dining</a></li>
+      <li><a href="#gallery" data-i18n="nav.gallery">Gallery</a></li>
+      <li><a href="#getting-here" data-i18n="nav.getting">Getting Here</a></li>
+      <li><a href="#faq" data-i18n="nav.faq">FAQ</a></li>
+      <li><a href="#book" data-i18n="nav.book">Book Now</a></li>
+    </ul>
+    <div class="menu-aside">
+      <img src="images/menu-aerial.jpg" alt="" loading="lazy">
+      <p class="menu-contact">
+        <a href="tel:+959790746969">09 790 746 969</a><br>
+        <a href="mailto:cavernislandresort@gmail.com">cavernislandresort@gmail.com</a>
+      </p>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- ============ HERO ============ -->
+<section class="hero">
+  <div class="hero-slides">
+    <div class="slide is-active" data-caption="hero.c1" style="background-image:url(images/hero.jpg)"></div>
+    <div class="slide" data-caption="hero.c2" style="background-image:url(images/hero-cave.jpg)"></div>
+    <div class="slide" data-caption="hero.c3" style="background-image:url(images/hero-kayak.jpg)"></div>
+    <div class="slide" data-caption="hero.c4" style="background-image:url(images/hero-reef.jpg)"></div>
+  </div>
+  <div class="hero-shade"></div>
+  <div class="hero-content">
+    <p class="eyebrow light" data-i18n="hero.eyebrow">Mergui Archipelago · Southern Myanmar</p>
+    <h1 class="hero-title" data-i18n="hero.title">Discover Paradise Beyond the Ordinary.</h1>
+    <a href="#book" class="btn btn-light" data-i18n="hero.cta">Plan Your Stay</a>
+  </div>
+  <div class="hero-meta">
+    <div class="hero-meta-top">
+      <span class="hero-count"><b id="heroIdx">01</b> / <span id="heroTotal">04</span></span>
+      <span class="hero-caption" id="heroCaption">Hlaing Gu Beach</span>
+    </div>
+    <div class="hero-meta-bottom">
+      <div class="hero-progress"><i id="heroBar"></i></div>
+      <button class="circle-btn sm" id="heroPrev" aria-label="Previous photo"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+      <button class="circle-btn sm" id="heroNext" aria-label="Next photo"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="section about" id="about">
+  <div class="wrap about-grid">
+    <div class="about-text reveal">
+      <p class="eyebrow" data-i18n="about.eyebrow">About Us</p>
+      <h2 class="h2" data-i18n="about.title">A hidden tropical paradise</h2>
+      <p class="lead" data-i18n="about.p1">Nestled in the breathtaking Mergui Archipelago of Southern Myanmar, Cavern Island Resort (Hlaing Gu Island) is a hidden tropical paradise surrounded by pristine beaches, crystal clear waters, lush tropical forests, and untouched natural beauty.</p>
+      <p data-i18n="about.p2">From thrilling ocean adventures to peaceful moments by the sea, Cavern Island Resort brings together nature, adventure, and relaxation for an unforgettable island escape.</p>
+      <p class="signature" data-i18n="about.sign">Your Island Escape Awaits.</p>
+    </div>
+    <div class="about-media reveal">
+      <img class="about-img-a" src="images/island-sea.jpg" alt="Cavern Island seen from the sea with villas in the forest" loading="lazy">
+      <img class="about-img-b" src="images/room-window.jpg" alt="Guest looking out over the Andaman Sea from a room" loading="lazy">
+    </div>
+  </div>
+  <div class="wrap stats reveal">
+    <div class="stat"><span class="stat-num">25</span><span class="stat-label" data-i18n="stat.rooms">Rooms</span></div>
+    <div class="stat"><span class="stat-num">50–70</span><span class="stat-label" data-i18n="stat.guests">Guests</span></div>
+    <div class="stat"><span class="stat-num">1h 40m</span><span class="stat-label" data-i18n="stat.boat">By speedboat from Kawthaung</span></div>
+  </div>
+</section>
+
+<!-- ============ PANORAMA ============ -->
+<section class="pano" aria-hidden="true">
+  <div class="pano-img" style="background-image:url(images/pano.jpg)"></div>
+</section>
+
+<!-- ============ CAVERNS ============ -->
+<section class="section caverns" id="caverns">
+  <div class="wrap caverns-grid">
+    <figure class="caverns-main reveal"><img src="images/cavern-1.jpg" alt="Sea cave entrances along the southern coast" loading="lazy"></figure>
+    <div class="caverns-text reveal">
+      <p class="eyebrow" data-i18n="caverns.eyebrow">The Caverns</p>
+      <h2 class="h2" data-i18n="caverns.title">Named for the caves that shape its shore</h2>
+      <p data-i18n="caverns.p">Named after its magnificent natural caverns along the southern coastline, the island is home to extraordinary geological formations, hidden waterfalls, and natural wonders waiting to be explored.</p>
+    </div>
+    <figure class="caverns-small reveal"><img src="images/cavern-arch.jpg" alt="Kayakers passing a natural rock arch" loading="lazy"></figure>
+    <figure class="caverns-tall reveal"><img src="images/cavern-boat.jpg" alt="Guest on a boat beside a cave" loading="lazy"></figure>
+  </div>
+</section>
+
+<!-- ============ STAY ============ -->
+<section class="section stay" id="stay">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <p class="eyebrow" data-i18n="stay.eyebrow">Stay</p>
+      <h2 class="h2" data-i18n="stay.title">Island stays, unforgettable days</h2>
+      <p class="section-intro" data-i18n="stay.p">25 beautifully designed rooms, nestled between jungle and sea. A private island escape where comfort meets nature.</p>
+      <p class="overview" data-i18n="stay.overview">25 Rooms · 50–70 Guests</p>
+    </div>
+
+    <div class="rooms">
+      <article class="room reveal">
+        <div class="room-img"><img src="images/room-hilltop.jpg" alt="Hilltop sea view room" loading="lazy"></div>
+        <p class="room-tag" data-i18n="room1.tag">Premium Room I</p>
+        <h3 class="h3" data-i18n="room1.name">Hilltop Sea View</h3>
+        <ul class="specs">
+          <li><span data-i18n="spec.qty">Rooms</span><b>2</b></li>
+          <li><span data-i18n="spec.cap">Guests</span><b>2–4</b></li>
+          <li><span data-i18n="spec.view">View</span><b data-i18n="room1.name">Hilltop Sea View</b></li>
+          <li><span data-i18n="spec.bed">Bedding</span><b data-i18n="bed.2double">Double room with 2 double beds</b></li>
+        </ul>
+        <a href="#book" class="link" data-room="hilltop" data-i18n="room.enquire">Enquire</a>
+      </article>
+
+      <article class="room reveal">
+        <div class="room-img"><img src="images/room-seaview.jpg" alt="Thatched-roof villa among tropical plants" loading="lazy"></div>
+        <p class="room-tag" data-i18n="room2.tag">Premium Room II</p>
+        <h3 class="h3" data-i18n="room2.name">Sea View</h3>
+        <ul class="specs">
+          <li><span data-i18n="spec.qty">Rooms</span><b>2</b></li>
+          <li><span data-i18n="spec.cap">Guests</span><b>2–4</b></li>
+          <li><span data-i18n="spec.view">View</span><b data-i18n="room2.name">Sea View</b></li>
+          <li><span data-i18n="spec.bed">Bedding</span><b data-i18n="bed.2double">Double room with 2 double beds</b></li>
+        </ul>
+        <a href="#book" class="link" data-room="seaview" data-i18n="room.enquire">Enquire</a>
+      </article>
+
+      <article class="room reveal">
+        <div class="room-img"><img src="images/room-forest.jpg" alt="Forest villa among tropical trees" loading="lazy"></div>
+        <p class="room-tag" data-i18n="room3.tag">Private Room</p>
+        <h3 class="h3" data-i18n="room3.name">Forest Villa</h3>
+        <ul class="specs">
+          <li><span data-i18n="spec.qty">Rooms</span><b>5</b></li>
+          <li><span data-i18n="spec.cap">Guests</span><b>3–4</b></li>
+          <li><span data-i18n="spec.type">Type</span><b data-i18n="room3.name">Forest Villa</b></li>
+          <li><span data-i18n="spec.bed">Bedding</span><b data-i18n="bed.doubleTwin">Two double / twin beds</b></li>
+        </ul>
+        <a href="#book" class="link" data-room="forest" data-i18n="room.enquire">Enquire</a>
+      </article>
+
+      <article class="room reveal">
+        <div class="room-img"><img src="images/room-oceanfront.jpg" alt="Bright room with floor-to-ceiling sea view windows" loading="lazy"></div>
+        <p class="room-tag" data-i18n="room4.tag">Oceanfront Room</p>
+        <h3 class="h3" data-i18n="room4.name">Andaman View</h3>
+        <ul class="specs">
+          <li><span data-i18n="spec.qty">Rooms</span><b>16</b></li>
+          <li><span data-i18n="spec.cap">Guests</span><b>2–3</b></li>
+          <li><span data-i18n="spec.view">View</span><b data-i18n="room4.name">Andaman View</b></li>
+          <li><span data-i18n="spec.bed">Bedding</span><b data-i18n="bed.doubleQueen">Two double / queen beds</b></li>
+        </ul>
+        <a href="#book" class="link" data-room="oceanfront" data-i18n="room.enquire">Enquire</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ EXPERIENCES ============ -->
+<section class="section experiences" id="experiences">
+  <div class="wrap exp-head reveal">
+    <div>
+      <p class="eyebrow light" data-i18n="exp.eyebrow">Experiences</p>
+      <h2 class="h2" data-i18n="exp.title">Days shaped by the sea</h2>
+    </div>
+    <p class="section-intro" data-i18n="exp.p">Kayaking, snorkeling, jet ski and more — the Andaman Sea is your playground.</p>
+  </div>
+  <div class="exp-track-wrap">
+    <div class="exp-track" id="expTrack">
+      <article class="exp"><img src="images/exp-snorkel.jpg" alt="" loading="lazy"><div class="exp-cap"><h3 data-i18n="exp.snorkel">Snorkeling</h3><p data-i18n="exp.snorkel.d">Coral gardens and clownfish just offshore.</p></div></article>
+      <article class="exp"><img src="images/exp-kayak.jpg" alt="" loading="lazy"><div class="exp-cap"><h3 data-i18n="exp.kayak">Kayaking</h3><p data-i18n="exp.kayak.d">Paddle calm bays along the jungle coast.</p></div></article>
+      <article class="exp"><img src="images/exp-caves.jpg" alt="" loading="lazy"><div class="exp-cap"><h3 data-i18n="exp.caves">Cavern Tours</h3><p data-i18n="exp.caves.d">Explore sea caves and rock arches by boat.</p></div></article>
+      <article class="exp"><img src="images/exp-paddle.jpg" alt="" loading="lazy"><div class="exp-cap"><h3 data-i18n="exp.paddle">Stand-up Paddle</h3><p data-i18n="exp.paddle.d">Glide over clear turquoise shallows.</p></div></article>
+      <article class="exp"><img src="images/exp-reef.jpg" alt="" loading="lazy"><div class="exp-cap"><h3 data-i18n="exp.reef">Reef Life</h3><p data-i18n="exp.reef.d">Discover the vivid underwater world of Mergui.</p></div></article>
+      <article class="exp"><img src="images/exp-boat.jpg" alt="" loading="lazy"><div class="exp-cap"><h3 data-i18n="exp.boat">Island Hopping</h3><p data-i18n="exp.boat.d">Cruise to nearby beaches and islands.</p></div></article>
+      <article class="exp"><img src="images/exp-sunset.jpg" alt="" loading="lazy"><div class="exp-cap"><h3 data-i18n="exp.sunset">Sunsets</h3><p data-i18n="exp.sunset.d">Golden evenings over the archipelago.</p></div></article>
+      <article class="exp"><img src="images/exp-hike.jpg" alt="" loading="lazy"><div class="exp-cap"><h3 data-i18n="exp.hike">Nature Walks</h3><p data-i18n="exp.hike.d">Hike to viewpoints above the sea.</p></div></article>
+    </div>
+  </div>
+  <div class="wrap exp-nav">
+    <button class="circle-btn" id="expPrev" aria-label="Previous"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <button class="circle-btn" id="expNext" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg></button>
+  </div>
+</section>
+
+<!-- ============ DINING ============ -->
+<section class="dining" id="dining">
+  <div class="dining-hero" style="background-image:url(images/dine-night.jpg)">
+    <div class="dining-card reveal">
+      <p class="eyebrow" data-i18n="dine.eyebrow">Dining &amp; Bar</p>
+      <h2 class="h2" data-i18n="dine.title">Dinner under the trees</h2>
+      <p data-i18n="dine.p">Our all-day restaurant serves fresh island flavours, while the Island Bar &amp; Lounge and private event decking set the scene for sunset drinks and celebrations under the lights.</p>
+      <ul class="ticks">
+        <li data-i18n="dine.f1">All-day dining restaurant</li>
+        <li data-i18n="dine.f2">Island Bar &amp; Lounge</li>
+        <li data-i18n="dine.f3">Private event decking</li>
+      </ul>
+    </div>
+  </div>
+  <div class="wrap dining-strip">
+    <img src="images/dine-bar.jpg" alt="Island bar and lounge at night" loading="lazy" class="reveal">
+    <img src="images/dine-deck.jpg" alt="Sea view deck with table for two" loading="lazy" class="reveal">
+    <img src="images/dine-cruise.jpg" alt="Guest relaxing on the boat beside the island cliffs" loading="lazy" class="reveal">
+  </div>
+</section>
+
+<!-- ============ AMENITIES ============ -->
+<section class="section amenities">
+  <div class="wrap">
+    <div class="section-head center reveal">
+      <p class="eyebrow" data-i18n="amen.eyebrow">Facilities</p>
+      <h2 class="h2" data-i18n="amen.title">Everything you need, nothing you don't</h2>
+    </div>
+    <ul class="amen-grid reveal">
+      <li><svg viewBox="0 0 24 24"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2M7 2v20M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3zm0 0v7"/></svg><h3 data-i18n="amen.restaurant">Restaurant</h3><p data-i18n="amen.restaurant.d">All-day dining</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M8 22h8M12 15v7M5 3h14l-7 12z M7.5 7h9"/></svg><h3 data-i18n="amen.bar">Bar</h3><p data-i18n="amen.bar.d">Island bar &amp; lounge</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M2 10h20M2 14h20M5 14v6M19 14v6M7 10V6M17 10V6M4 6h16"/></svg><h3 data-i18n="amen.deck">Decking</h3><p data-i18n="amen.deck.d">Private event decking</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M5 12.5a10 10 0 0 1 14 0M8.5 16a5 5 0 0 1 7 0M2 9a15 15 0 0 1 20 0M12 20h.01"/></svg><h3 data-i18n="amen.wifi">Free Wi-Fi</h3><p data-i18n="amen.wifi.d">Throughout the resort</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg><h3 data-i18n="amen.water">Water Sports</h3><p data-i18n="amen.water.d">Kayaking, snorkeling, jet ski</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M2 21c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1s1.2 1 2.5 1c2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1M19.4 17.5 21 11l-9-4-9 4 1.6 6.5M12 2v5M8 4h8"/></svg><h3 data-i18n="amen.boat">Boat Transfers</h3><p data-i18n="amen.boat.d">From Kawthaung</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M3 20h18M5 20v-2a7 7 0 0 1 14 0v2M12 11V9M10 9h4"/></svg><h3 data-i18n="amen.concierge">Concierge</h3><p data-i18n="amen.concierge.d">24/7 service</p></li>
+      <li><svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10zM9 12l2 2 4-4"/></svg><h3 data-i18n="amen.security">24-Hour Security</h3><p data-i18n="amen.security.d">For your peace of mind</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ GALLERY ============ -->
+<section class="section gallery" id="gallery">
+  <div class="wrap">
+    <div class="section-head reveal gallery-head">
+      <div>
+        <p class="eyebrow" data-i18n="gallery.eyebrow">Gallery</p>
+        <h2 class="h2" data-i18n="gallery.title">Moments from Hlaing Gu</h2>
+      </div>
+      <div class="socials">
+        <span data-i18n="gallery.follow">Follow us</span>
+        <a href="https://www.instagram.com/cavernislandresort" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://www.facebook.com/share/1A369xtSbC/" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://www.tiktok.com/@cavern.island.hla" target="_blank" rel="noopener">TikTok</a>
+      </div>
+    </div>
+    <div class="masonry" id="masonry">
+      <a href="images/g-aerial.jpg"><img src="images/g-aerial.jpg" alt="Aerial view of the resort beach and villas" loading="lazy"></a>
+      <a href="images/g-kayak-beach.jpg" class="tall-a"><img src="images/g-kayak-beach.jpg" alt="Paddleboarding over turquoise water" loading="lazy"></a>
+      <a href="images/g-overunder.jpg"><img src="images/g-overunder.jpg" alt="Snorkeler over coral below the island" loading="lazy"></a>
+      <a href="images/g-sunset-walk.jpg"><img src="images/g-sunset-walk.jpg" alt="Watching the sunset from the hilltop" loading="lazy"></a>
+      <a href="images/g-halfwater.jpg"><img src="images/g-halfwater.jpg" alt="Guests on a kayak in clear water" loading="lazy"></a>
+      <a href="images/g-cliff.jpg"><img src="images/g-cliff.jpg" alt="Jungle cliffs over turquoise water" loading="lazy"></a>
+      <a href="images/g-clownfish.jpg"><img src="images/g-clownfish.jpg" alt="Clownfish in an anemone" loading="lazy"></a>
+      <a href="images/g-drone-kayak.jpg" class="tall-b"><img src="images/g-drone-kayak.jpg" alt="Clear kayak from above" loading="lazy"></a>
+      <a href="images/g-island.jpg"><img src="images/g-island.jpg" alt="Cavern Island from the air" loading="lazy"></a>
+      <a href="images/g-kayak-two.jpg"><img src="images/g-kayak-two.jpg" alt="Two guests in a kayak" loading="lazy"></a>
+      <a href="images/g-beach-run.jpg"><img src="images/g-beach-run.jpg" alt="Couple running in the shallows" loading="lazy"></a>
+      <a href="images/g-lagoon.jpg"><img src="images/g-lagoon.jpg" alt="Aerial view of villas along the white sand beach" loading="lazy"></a>
+      <a href="images/g-glow.jpg"><img src="images/g-glow.jpg" alt="Boat on the sea at orange sunset" loading="lazy"></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ GETTING HERE ============ -->
+<section class="getting" id="getting-here" style="background-image:url(images/get-bg.jpg)">
+  <div class="getting-shade"></div>
+  <div class="wrap getting-inner">
+    <div class="getting-head reveal">
+      <div>
+        <p class="eyebrow light" data-i18n="get.eyebrow">Getting Here</p>
+        <h2 class="h2" data-i18n="get.title">How to get to Cavern Island</h2>
+      </div>
+      <p class="getting-lead" data-i18n="get.p">Three easy legs from Yangon to our private beach. The last one is a scenic speedboat ride through the Mergui Archipelago.</p>
+    </div>
+    <ol class="route reveal">
+      <li class="leg">
+        <div class="leg-top"><span class="leg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M2.5 13.5 21 6.5c.9-.3 1.6.7 1 1.4l-3.2 3.6L8 15.4l-3.3-1.1-2.2-.8Z"/><path d="m8 15.4 1.2 4.6 2.6-3.4"/><path d="M6.5 9.2 4 8.3l1.5-1.5 4.8.9"/></svg></span><span class="leg-mode" data-i18n="get.m1">By air</span></div>
+        <span class="leg-n">01</span>
+        <h3 data-i18n="get.s1.t">Yangon → Kawthaung Airport</h3>
+        <p data-i18n="get.s1.d">Take a domestic flight from Yangon to Kawthaung Airport.</p>
+      </li>
+      <li class="leg">
+        <div class="leg-top"><span class="leg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="3.5" width="16" height="14" rx="2.5"/><path d="M4 11h16M8 3.5v7.5M16 3.5v7.5"/><circle cx="8" cy="14.5" r="1"/><circle cx="16" cy="14.5" r="1"/><path d="M6.5 17.5V20M17.5 17.5V20"/></svg></span><span class="leg-mode" data-i18n="get.m2">By road</span></div>
+        <span class="leg-n">02</span>
+        <h3 data-i18n="get.s2.t">Kawthaung Airport → Main Jetty</h3>
+        <p data-i18n="get.s2.d">Take a bus from Kawthaung Airport to Kawthaung Main Jetty (မြို့မဆိပ်ကမ်း).</p>
+      </li>
+      <li class="leg">
+        <div class="leg-top"><span class="leg-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 14h18l-2.6 4.2a2 2 0 0 1-1.7.8H7.3a2 2 0 0 1-1.7-.8L3 14Z"/><path d="M6 14V9.5h9l3 4.5"/><path d="M9 9.5V6.5h3"/><path d="M2 21.5c1.7 0 1.7-1 3.3-1s1.7 1 3.4 1 1.6-1 3.3-1 1.7 1 3.3 1 1.7-1 3.4-1 1.6 1 3.3 1"/></svg></span><span class="leg-mode" data-i18n="get.m3">By sea · 1h 40m</span></div>
+        <span class="leg-n">03</span>
+        <h3 data-i18n="get.s3.t">Main Jetty → Cavern Island</h3>
+        <p data-i18n="get.s3.d">Take a speedboat from Kawthaung Main Jetty to Cavern Island. The journey takes approx. 1 hour 40 minutes.</p>
+      </li>
+    </ol>
+    <div class="getting-foot reveal">
+      <p data-i18n="get.note">Tell us your flight and we'll arrange your boat transfer from Kawthaung.</p>
+      <div class="getting-actions">
+        <a class="btn btn-light-solid" href="#book" data-i18n="get.cta">Arrange my transfer</a>
+        <a class="link light" href="https://www.google.com/maps/search/?api=1&amp;query=Cavern+Island+Resort+Kawthaung" target="_blank" rel="noopener" data-i18n="get.map">Open in Google Maps</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FAQ ============ -->
+<section class="section faq" id="faq">
+  <div class="wrap faq-grid">
+    <div class="faq-media reveal" id="faqMedia">
+      <img src="images/faq-arrive.jpg" alt="Boat crossing the open sea from above" loading="lazy" class="is-active">
+      <img src="images/faq-book.jpg" alt="Bright twin room with sea view windows" loading="lazy">
+      <img src="images/faq-bring.jpg" alt="Guest walking to the water with snorkel fins" loading="lazy">
+      <img src="images/faq-wifi.jpg" alt="Bedside table with tea set" loading="lazy">
+      <img src="images/faq-activities.jpg" alt="Kayaking over clear reef water" loading="lazy">
+      <img src="images/faq-groups.jpg" alt="Group of friends on the beach" loading="lazy">
+    </div>
+    <div class="faq-side reveal">
+      <p class="eyebrow" data-i18n="faq.eyebrow">FAQ</p>
+      <h2 class="h2" data-i18n="faq.title">Good to know</h2>
+      <div class="faq-list" id="faqList">
+      <details data-img="0" open><summary data-i18n="faq.q1"></summary><div class="faq-body"><img class="faq-thumb" src="images/faq-arrive.jpg" alt="" loading="lazy"><p data-i18n="faq.a1"></p></div></details>
+      <details data-img="1"><summary data-i18n="faq.q2"></summary><div class="faq-body"><img class="faq-thumb" src="images/faq-book.jpg" alt="" loading="lazy"><p data-i18n="faq.a2"></p></div></details>
+      <details data-img="2"><summary data-i18n="faq.q3"></summary><div class="faq-body"><img class="faq-thumb" src="images/faq-bring.jpg" alt="" loading="lazy"><p data-i18n="faq.a3"></p></div></details>
+      <details data-img="3"><summary data-i18n="faq.q4"></summary><div class="faq-body"><img class="faq-thumb" src="images/faq-wifi.jpg" alt="" loading="lazy"><p data-i18n="faq.a4"></p></div></details>
+      <details data-img="4"><summary data-i18n="faq.q5"></summary><div class="faq-body"><img class="faq-thumb" src="images/faq-activities.jpg" alt="" loading="lazy"><p data-i18n="faq.a5"></p></div></details>
+      <details data-img="5"><summary data-i18n="faq.q6"></summary><div class="faq-body"><img class="faq-thumb" src="images/faq-groups.jpg" alt="" loading="lazy"><p data-i18n="faq.a6"></p></div></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOKING ============ -->
+<section class="book" id="book" style="background-image:url(images/book-bg.jpg)">
+  <div class="book-shade"></div>
+  <div class="wrap book-grid">
+    <div class="book-intro reveal">
+      <h2 class="book-title" data-i18n="book.title">Request your stay</h2>
+      <p class="book-lead" data-i18n="book.p">For reservations or more information, please contact our</p>
+      <p class="book-team" data-i18n="book.team">Reservations Team</p>
+      <div class="book-direct">
+        <p><span>E.</span> <a href="mailto:cavernislandresort@gmail.com">cavernislandresort@gmail.com</a></p>
+        <p><span>T.</span> <a href="tel:+959790746969">+95 9 790 746 969</a></p>
+        <p><span>T.</span> <a href="tel:+959795267661">+95 9 795 267 661</a></p>
+        <p><span>T.</span> <a href="tel:+959768902908">+95 9 768 902 908</a></p>
+      </div>
+      <p class="book-nopay" data-i18n="book.nopay">No payment needed now — our team will contact you to confirm.</p>
+    </div>
+
+    <div class="book-form-wrap reveal">
+      <form id="bookForm" novalidate>
+        <div class="field-group">
+          <span class="group-label"><span data-i18n="form.name">Name</span>*</span>
+          <div class="row">
+            <label class="field"><input type="text" name="firstName" required autocomplete="given-name" data-i18n-ph="form.first" placeholder="First name" aria-label="First name"></label>
+            <label class="field"><input type="text" name="lastName" autocomplete="family-name" data-i18n-ph="form.last" placeholder="Last name" aria-label="Last name"></label>
+          </div>
+        </div>
+        <div class="row">
+          <label class="field"><span data-i18n="form.email">Email</span>
+            <input type="email" name="email" autocomplete="email" placeholder="name@example.com"></label>
+          <label class="field"><span><span data-i18n="form.phone">Phone</span>*</span>
+            <input type="tel" name="phone" required autocomplete="tel" data-i18n-ph="form.phonePh" placeholder="e.g. +95 9 xxx xxx xxx"></label>
+        </div>
+        <div class="row">
+          <label class="field"><span><span data-i18n="form.country">Country of residence</span>*</span>
+            <select name="country" required>
+              <option>Myanmar</option>
+              <option>Thailand</option>
+              <option>China</option>
+              <option>Singapore</option>
+              <option>Malaysia</option>
+              <option>Japan</option>
+              <option>South Korea</option>
+              <option>Taiwan</option>
+              <option>Hong Kong</option>
+              <option>Vietnam</option>
+              <option>Indonesia</option>
+              <option>Philippines</option>
+              <option>Cambodia</option>
+              <option>Laos</option>
+              <option>India</option>
+              <option>Australia</option>
+              <option>New Zealand</option>
+              <option>United States</option>
+              <option>Canada</option>
+              <option>United Kingdom</option>
+              <option>Germany</option>
+              <option>France</option>
+              <option>Italy</option>
+              <option>Netherlands</option>
+              <option>Switzerland</option>
+              <option>Russia</option>
+              <option>United Arab Emirates</option>
+              <option value="Other" data-i18n="form.other">Other</option>
+            </select></label>
+          <label class="field"><span data-i18n="form.contactVia">Preferred contact</span>
+            <select name="contactVia">
+              <option value="Phone call" data-i18n="form.viaPhone">Phone call</option>
+              <option value="Viber">Viber</option>
+              <option value="WhatsApp">WhatsApp</option>
+              <option value="Email" data-i18n="form.email">Email</option>
+            </select></label>
+        </div>
+        <div class="row">
+          <label class="field"><span><span data-i18n="form.checkin">Check-in</span>*</span>
+            <input type="date" name="checkin" required></label>
+          <label class="field"><span><span data-i18n="form.checkout">Check-out</span>*</span>
+            <input type="date" name="checkout" required></label>
+        </div>
+        <div class="row row-3">
+          <label class="field"><span data-i18n="form.adults">Adults</span>
+            <input type="number" name="adults" min="1" max="70" value="2" required></label>
+          <label class="field"><span data-i18n="form.children">Children</span>
+            <input type="number" name="children" min="0" max="30" value="0"></label>
+          <label class="field"><span data-i18n="form.room">Room type</span>
+            <select name="room" id="roomSelect">
+              <option value="No preference" data-i18n="form.roomAny">No preference</option>
+              <option value="hilltop" data-i18n="room1.full">Premium Room I · Hilltop Sea View</option>
+              <option value="seaview" data-i18n="room2.full">Premium Room II · Sea View</option>
+              <option value="forest" data-i18n="room3.full">Private Room · Forest Villa</option>
+              <option value="oceanfront" data-i18n="room4.full">Oceanfront Room · Andaman View</option>
+            </select></label>
+        </div>
+        <label class="check"><input type="checkbox" name="transfer" checked> <span data-i18n="form.transfer">I need a boat transfer from Kawthaung</span></label>
+        <label class="field"><span data-i18n="form.message">Message</span>
+          <textarea name="message" rows="4" maxlength="600" data-i18n-ph="form.messagePh" placeholder="Arrival time, celebrations, dietary needs…"></textarea></label>
+        <p class="char-count"><span id="charCount">0</span> <span data-i18n="form.chars">of 600 max characters</span></p>
+        <p class="form-error" id="formError" role="alert"></p>
+        <button type="submit" class="btn btn-submit" id="submitBtn" data-i18n="form.submit">Submit</button>
+      </form>
+
+      <div class="book-done" id="bookDone" hidden>
+        <h3 class="book-title small" data-i18n="done.title">Thank you!</h3>
+        <p id="doneMsg"></p>
+        <div class="done-actions" id="doneActions">
+          <a class="btn btn-submit" id="sendEmail" data-i18n="done.email">Send by Email</a>
+          <a class="btn btn-line" id="sendWA" target="_blank" rel="noopener" data-i18n="done.wa">Send via WhatsApp</a>
+          <a class="btn btn-line" id="sendViber" data-i18n="done.viber">Send via Viber</a>
+          <button class="btn btn-line" id="copyBtn" type="button" data-i18n="done.copy">Copy details</button>
+        </div>
+        <pre class="summary" id="summary"></pre>
+        <button class="link light" id="againBtn" type="button" data-i18n="done.again">Make another request</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+  <div class="wrap footer-grid">
+    <div class="footer-brand">
+      <img src="images/logo-white.png" alt="The Cavern Island Resort">
+      <p data-i18n="about.sign">Your Island Escape Awaits.</p>
+    </div>
+    <div>
+      <h4 data-i18n="footer.contact">Contact</h4>
+      <a href="tel:+959790746969">09 790 746 969</a>
+      <a href="tel:+959795267661">09 795 267 661</a>
+      <a href="tel:+959768902908">09 768 902 908</a>
+      <a href="mailto:cavernislandresort@gmail.com">cavernislandresort@gmail.com</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.follow">Follow</h4>
+      <a href="https://www.facebook.com/share/1A369xtSbC/" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://www.instagram.com/cavernislandresort" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.tiktok.com/@cavern.island.hla" target="_blank" rel="noopener">TikTok</a>
+    </div>
+    <div>
+      <h4 data-i18n="footer.location">Location</h4>
+      <p data-i18n="footer.address">Cavern Island (Hlaing Gu), Kawthaung, Tanintharyi Region, Myanmar</p>
+    </div>
+  </div>
+  <div class="wrap footer-bottom">
+    <span>© <span id="year"></span> The Cavern Island Resort. <span data-i18n="footer.rights">All rights reserved.</span></span>
+    <a href="#top">↑</a>
+  </div>
+</footer>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" hidden>
+  <button class="lb-close" id="lbClose" aria-label="Close">×</button>
+  <button class="lb-nav lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+  <img id="lbImg" alt="">
+  <button class="lb-nav lb-next" id="lbNext" aria-label="Next">›</button>
+</div>
+
+<!-- Mobile sticky book bar -->
+<a href="#book" class="mobile-book" data-i18n="nav.book">Book Now</a>
+
+<script src="js/i18n.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
