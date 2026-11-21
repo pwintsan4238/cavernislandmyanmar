@@ -1,0 +1,6 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/zocpszwh/public_html/cavernislandmyanmar.com/
+    - /bin/cp -R * $DEPLOYPATH
+    
